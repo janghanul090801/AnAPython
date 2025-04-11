@@ -17,6 +17,18 @@ def quick_sort(arr) :
             equal_arr.append(num)
     return quick_sort(lesser_arr) + equal_arr + quick_sort(greater_arr)
 
+def sortOnlyThreeNONONO(arr):
+    a = arr[0]
+    b = arr[1]
+    c = arr[2]
+    if a > b:
+        a,b = b,a
+    if b > c:
+        b,c = c,b
+    if a > b:
+        a,b = b,a
+    return a,b,c
+
 print(sortList(tuple, sorted, 1,6,3,4,327490851980709851))
 print(sortList(tuple, quick_sort, 25,32662,24,21,1,33,234,2,6,524,4,2,42))  # sorted 안씀!
-
+print(sortList(tuple, sortOnlyThreeNONONO, 3,4,2))
